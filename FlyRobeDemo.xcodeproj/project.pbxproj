@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E5C303B1D1AE0180060800B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C303A1D1AE0180060800B /* AppDelegate.swift */; };
+		6E5C303D1D1AE0180060800B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C303C1D1AE0180060800B /* ViewController.swift */; };
+		6E5C30401D1AE0180060800B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C303E1D1AE0180060800B /* Main.storyboard */; };
+		6E5C30421D1AE0180060800B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30411D1AE0180060800B /* Assets.xcassets */; };
+		6E5C30451D1AE0180060800B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30431D1AE0180060800B /* LaunchScreen.storyboard */; };
+		6E5C30501D1AE0180060800B /* FlyRobeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C304F1D1AE0180060800B /* FlyRobeDemoTests.swift */; };
+		6E5C305B1D1AE0180060800B /* FlyRobeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C305A1D1AE0180060800B /* FlyRobeDemoUITests.swift */; };
+		6E5C30A31D1AE8060060800B /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30A21D1AE8060060800B /* HomeScreenCollectionViewCell.swift */; };
+		6E5C30A81D1AEF520060800B /* HomeTableViewHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30A71D1AEF520060800B /* HomeTableViewHeaderViewCell.swift */; };
+		6E5C30AA1D1AEF5E0060800B /* HomeTableViewHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30A91D1AEF5E0060800B /* HomeTableViewHeaderViewCell.xib */; };
+		6E5C30AC1D1AF2840060800B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30AB1D1AF2840060800B /* Constants.swift */; };
+		6E5C30B41D1B1ABE0060800B /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30B31D1B1ABE0060800B /* APIController.swift */; };
+		6E5C30B71D1B1C2D0060800B /* MainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30B61D1B1C2D0060800B /* MainSection.swift */; };
+		6E5C30B91D1B1C840060800B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30B81D1B1C840060800B /* Category.swift */; };
+		6E5C30BB1D1BDE9F0060800B /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30BA1D1BDE9F0060800B /* ProgressView.swift */; };
+		6E5C30BD1D1BDEAD0060800B /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30BC1D1BDEAD0060800B /* ProgressView.xib */; };
+		6E5C30BF1D1BEAB10060800B /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30BE1D1BEAB10060800B /* DropDownView.xib */; };
+		6E5C30C11D1BEABE0060800B /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30C01D1BEABE0060800B /* DropDownView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E5C304C1D1AE0180060800B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E5C302F1D1AE0180060800B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E5C30361D1AE0180060800B;
+			remoteInfo = FlyRobeDemo;
+		};
+		6E5C30571D1AE0180060800B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E5C302F1D1AE0180060800B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E5C30361D1AE0180060800B;
+			remoteInfo = FlyRobeDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E5C30371D1AE0180060800B /* FlyRobeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyRobeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5C303A1D1AE0180060800B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E5C303C1D1AE0180060800B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E5C303F1D1AE0180060800B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E5C30411D1AE0180060800B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E5C30441D1AE0180060800B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E5C30461D1AE0180060800B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5C304B1D1AE0180060800B /* FlyRobeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyRobeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5C304F1D1AE0180060800B /* FlyRobeDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyRobeDemoTests.swift; sourceTree = "<group>"; };
+		6E5C30511D1AE0180060800B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5C30561D1AE0180060800B /* FlyRobeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyRobeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5C305A1D1AE0180060800B /* FlyRobeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyRobeDemoUITests.swift; sourceTree = "<group>"; };
+		6E5C305C1D1AE0180060800B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5C30A21D1AE8060060800B /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E5C30A71D1AEF520060800B /* HomeTableViewHeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeaderViewCell.swift; sourceTree = "<group>"; };
+		6E5C30A91D1AEF5E0060800B /* HomeTableViewHeaderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewHeaderViewCell.xib; sourceTree = "<group>"; };
+		6E5C30AB1D1AF2840060800B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6E5C30B31D1B1ABE0060800B /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		6E5C30B61D1B1C2D0060800B /* MainSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSection.swift; sourceTree = "<group>"; };
+		6E5C30B81D1B1C840060800B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		6E5C30BA1D1BDE9F0060800B /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		6E5C30BC1D1BDEAD0060800B /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
+		6E5C30BE1D1BEAB10060800B /* DropDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
+		6E5C30C01D1BEABE0060800B /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E5C30341D1AE0180060800B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E5C30481D1AE0180060800B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E5C30531D1AE0180060800B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E5C302E1D1AE0180060800B = {
+			isa = PBXGroup;
+			children = (
+				6E5C30391D1AE0180060800B /* FlyRobeDemo */,
+				6E5C304E1D1AE0180060800B /* FlyRobeDemoTests */,
+				6E5C30591D1AE0180060800B /* FlyRobeDemoUITests */,
+				6E5C30381D1AE0180060800B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E5C30381D1AE0180060800B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C30371D1AE0180060800B /* FlyRobeDemo.app */,
+				6E5C304B1D1AE0180060800B /* FlyRobeDemoTests.xctest */,
+				6E5C30561D1AE0180060800B /* FlyRobeDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E5C30391D1AE0180060800B /* FlyRobeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C30B51D1B1B3C0060800B /* Model */,
+				6E5C30B21D1B1AAD0060800B /* Util */,
+				6E5C30AD1D1B072F0060800B /* View */,
+				6E5C30A41D1AEEEA0060800B /* TableViewCell */,
+				6E5C303A1D1AE0180060800B /* AppDelegate.swift */,
+				6E5C303C1D1AE0180060800B /* ViewController.swift */,
+				6E5C303E1D1AE0180060800B /* Main.storyboard */,
+				6E5C30411D1AE0180060800B /* Assets.xcassets */,
+				6E5C30431D1AE0180060800B /* LaunchScreen.storyboard */,
+				6E5C30461D1AE0180060800B /* Info.plist */,
+				6E5C30AB1D1AF2840060800B /* Constants.swift */,
+			);
+			path = FlyRobeDemo;
+			sourceTree = "<group>";
+		};
+		6E5C304E1D1AE0180060800B /* FlyRobeDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C304F1D1AE0180060800B /* FlyRobeDemoTests.swift */,
+				6E5C30511D1AE0180060800B /* Info.plist */,
+			);
+			path = FlyRobeDemoTests;
+			sourceTree = "<group>";
+		};
+		6E5C30591D1AE0180060800B /* FlyRobeDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C305A1D1AE0180060800B /* FlyRobeDemoUITests.swift */,
+				6E5C305C1D1AE0180060800B /* Info.plist */,
+			);
+			path = FlyRobeDemoUITests;
+			sourceTree = "<group>";
+		};
+		6E5C30A41D1AEEEA0060800B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C30A21D1AE8060060800B /* HomeScreenCollectionViewCell.swift */,
+				6E5C30A71D1AEF520060800B /* HomeTableViewHeaderViewCell.swift */,
+				6E5C30A91D1AEF5E0060800B /* HomeTableViewHeaderViewCell.xib */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		6E5C30AD1D1B072F0060800B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C30BA1D1BDE9F0060800B /* ProgressView.swift */,
+				6E5C30BC1D1BDEAD0060800B /* ProgressView.xib */,
+				6E5C30BE1D1BEAB10060800B /* DropDownView.xib */,
+				6E5C30C01D1BEABE0060800B /* DropDownView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6E5C30B21D1B1AAD0060800B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C30B31D1B1ABE0060800B /* APIController.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		6E5C30B51D1B1B3C0060800B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C30B61D1B1C2D0060800B /* MainSection.swift */,
+				6E5C30B81D1B1C840060800B /* Category.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E5C30361D1AE0180060800B /* FlyRobeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E5C305F1D1AE0180060800B /* Build configuration list for PBXNativeTarget "FlyRobeDemo" */;
+			buildPhases = (
+				6E5C30331D1AE0180060800B /* Sources */,
+				6E5C30341D1AE0180060800B /* Frameworks */,
+				6E5C30351D1AE0180060800B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlyRobeDemo;
+			productName = FlyRobeDemo;
+			productReference = 6E5C30371D1AE0180060800B /* FlyRobeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E5C304A1D1AE0180060800B /* FlyRobeDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E5C30621D1AE0180060800B /* Build configuration list for PBXNativeTarget "FlyRobeDemoTests" */;
+			buildPhases = (
+				6E5C30471D1AE0180060800B /* Sources */,
+				6E5C30481D1AE0180060800B /* Frameworks */,
+				6E5C30491D1AE0180060800B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E5C304D1D1AE0180060800B /* PBXTargetDependency */,
+			);
+			name = FlyRobeDemoTests;
+			productName = FlyRobeDemoTests;
+			productReference = 6E5C304B1D1AE0180060800B /* FlyRobeDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E5C30551D1AE0180060800B /* FlyRobeDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E5C30651D1AE0180060800B /* Build configuration list for PBXNativeTarget "FlyRobeDemoUITests" */;
+			buildPhases = (
+				6E5C30521D1AE0180060800B /* Sources */,
+				6E5C30531D1AE0180060800B /* Frameworks */,
+				6E5C30541D1AE0180060800B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E5C30581D1AE0180060800B /* PBXTargetDependency */,
+			);
+			name = FlyRobeDemoUITests;
+			productName = FlyRobeDemoUITests;
+			productReference = 6E5C30561D1AE0180060800B /* FlyRobeDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E5C302F1D1AE0180060800B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Anshuman Srivastava";
+				TargetAttributes = {
+					6E5C30361D1AE0180060800B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					6E5C304A1D1AE0180060800B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6E5C30361D1AE0180060800B;
+					};
+					6E5C30551D1AE0180060800B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6E5C30361D1AE0180060800B;
+					};
+				};
+			};
+			buildConfigurationList = 6E5C30321D1AE0180060800B /* Build configuration list for PBXProject "FlyRobeDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E5C302E1D1AE0180060800B;
+			productRefGroup = 6E5C30381D1AE0180060800B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E5C30361D1AE0180060800B /* FlyRobeDemo */,
+				6E5C304A1D1AE0180060800B /* FlyRobeDemoTests */,
+				6E5C30551D1AE0180060800B /* FlyRobeDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E5C30351D1AE0180060800B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E5C30AA1D1AEF5E0060800B /* HomeTableViewHeaderViewCell.xib in Resources */,
+				6E5C30451D1AE0180060800B /* LaunchScreen.storyboard in Resources */,
+				6E5C30BD1D1BDEAD0060800B /* ProgressView.xib in Resources */,
+				6E5C30BF1D1BEAB10060800B /* DropDownView.xib in Resources */,
+				6E5C30421D1AE0180060800B /* Assets.xcassets in Resources */,
+				6E5C30401D1AE0180060800B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E5C30491D1AE0180060800B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E5C30541D1AE0180060800B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E5C30331D1AE0180060800B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E5C30AC1D1AF2840060800B /* Constants.swift in Sources */,
+				6E5C30C11D1BEABE0060800B /* DropDownView.swift in Sources */,
+				6E5C30A81D1AEF520060800B /* HomeTableViewHeaderViewCell.swift in Sources */,
+				6E5C30B41D1B1ABE0060800B /* APIController.swift in Sources */,
+				6E5C303D1D1AE0180060800B /* ViewController.swift in Sources */,
+				6E5C30B71D1B1C2D0060800B /* MainSection.swift in Sources */,
+				6E5C303B1D1AE0180060800B /* AppDelegate.swift in Sources */,
+				6E5C30A31D1AE8060060800B /* HomeScreenCollectionViewCell.swift in Sources */,
+				6E5C30B91D1B1C840060800B /* Category.swift in Sources */,
+				6E5C30BB1D1BDE9F0060800B /* ProgressView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E5C30471D1AE0180060800B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E5C30501D1AE0180060800B /* FlyRobeDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E5C30521D1AE0180060800B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E5C305B1D1AE0180060800B /* FlyRobeDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E5C304D1D1AE0180060800B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E5C30361D1AE0180060800B /* FlyRobeDemo */;
+			targetProxy = 6E5C304C1D1AE0180060800B /* PBXContainerItemProxy */;
+		};
+		6E5C30581D1AE0180060800B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E5C30361D1AE0180060800B /* FlyRobeDemo */;
+			targetProxy = 6E5C30571D1AE0180060800B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E5C303E1D1AE0180060800B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E5C303F1D1AE0180060800B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E5C30431D1AE0180060800B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E5C30441D1AE0180060800B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E5C305D1D1AE0180060800B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E5C305E1D1AE0180060800B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E5C30601D1AE0180060800B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlyRobeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.freecharge.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6E5C30611D1AE0180060800B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlyRobeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.freecharge.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6E5C30631D1AE0180060800B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FlyRobeDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "anshuman.apps.-FlyRobeDemo.FlyRobeDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyRobeDemo.app/FlyRobeDemo";
+			};
+			name = Debug;
+		};
+		6E5C30641D1AE0180060800B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FlyRobeDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "anshuman.apps.-FlyRobeDemo.FlyRobeDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyRobeDemo.app/FlyRobeDemo";
+			};
+			name = Release;
+		};
+		6E5C30661D1AE0180060800B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FlyRobeDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "anshuman.apps.-FlyRobeDemo.FlyRobeDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FlyRobeDemo;
+			};
+			name = Debug;
+		};
+		6E5C30671D1AE0180060800B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FlyRobeDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "anshuman.apps.-FlyRobeDemo.FlyRobeDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FlyRobeDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E5C30321D1AE0180060800B /* Build configuration list for PBXProject "FlyRobeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E5C305D1D1AE0180060800B /* Debug */,
+				6E5C305E1D1AE0180060800B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E5C305F1D1AE0180060800B /* Build configuration list for PBXNativeTarget "FlyRobeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E5C30601D1AE0180060800B /* Debug */,
+				6E5C30611D1AE0180060800B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6E5C30621D1AE0180060800B /* Build configuration list for PBXNativeTarget "FlyRobeDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E5C30631D1AE0180060800B /* Debug */,
+				6E5C30641D1AE0180060800B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6E5C30651D1AE0180060800B /* Build configuration list for PBXNativeTarget "FlyRobeDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E5C30661D1AE0180060800B /* Debug */,
+				6E5C30671D1AE0180060800B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E5C302F1D1AE0180060800B /* Project object */;
+}
