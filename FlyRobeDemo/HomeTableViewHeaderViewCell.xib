@@ -11,35 +11,44 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 day Return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-iw-1ax">
-                    <rect key="frame" x="10" y="33" width="82.5" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-ye-JXF">
-                    <rect key="frame" x="534" y="17.5" width="46" height="30"/>
-                    <state key="normal" title="See all">
-                        <color key="titleColor" red="0.90588235289999997" green="0.3803921569" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Western" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQx-i9-NYC">
                     <rect key="frame" x="10" y="12" width="60.5" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 day Return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-iw-1ax">
+                    <rect key="frame" x="10" y="34" width="82.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-ye-JXF">
+                    <rect key="frame" x="534" y="17" width="46" height="30"/>
+                    <state key="normal" title="See all">
+                        <color key="titleColor" red="0.90588235289999997" green="0.3803921569" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="qce-ye-JXF" firstAttribute="centerY" secondItem="6gw-mk-tgT" secondAttribute="centerY" id="9TV-f8-rem"/>
                 <constraint firstAttribute="trailing" secondItem="qce-ye-JXF" secondAttribute="trailing" constant="20" id="FtL-Fb-Ng2"/>
                 <constraint firstItem="sQx-i9-NYC" firstAttribute="leading" secondItem="6gw-mk-tgT" secondAttribute="leading" constant="10" id="I2R-H9-S6y"/>
+                <constraint firstItem="qce-ye-JXF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yeh-iw-1ax" secondAttribute="trailing" constant="20" id="Jdo-4h-NSL"/>
                 <constraint firstItem="sQx-i9-NYC" firstAttribute="top" secondItem="6gw-mk-tgT" secondAttribute="top" constant="12" id="QJY-2E-sOa"/>
                 <constraint firstItem="yeh-iw-1ax" firstAttribute="top" secondItem="sQx-i9-NYC" secondAttribute="bottom" constant="2" id="jZu-Xk-6w1"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yeh-iw-1ax" secondAttribute="trailing" constant="100" id="t3k-gn-tJd"/>
                 <constraint firstItem="yeh-iw-1ax" firstAttribute="leading" secondItem="sQx-i9-NYC" secondAttribute="leading" id="waE-2A-dFz"/>
                 <constraint firstItem="qce-ye-JXF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yeh-iw-1ax" secondAttribute="trailing" constant="10" id="xja-dy-9bt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="t3k-gn-tJd"/>
+                    <exclude reference="Jdo-4h-NSL"/>
+                    <exclude reference="xja-dy-9bt"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="sectionDescLabel" destination="yeh-iw-1ax" id="L1G-Yq-ywX"/>
                 <outlet property="sectionNameLabel" destination="sQx-i9-NYC" id="Dsn-2l-mti"/>

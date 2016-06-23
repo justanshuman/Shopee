@@ -293,9 +293,11 @@ Own Everything</string>
         <!--Navigation Controller-->
         <scene sceneID="N22-ok-y4s">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DXZ-AJ-KvZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DXZ-AJ-KvZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Nb-R6-q4G">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="5Nb-R6-q4G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
