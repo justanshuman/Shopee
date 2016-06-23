@@ -13,7 +13,7 @@ class Category {
     var title: String?
     var subTitle: String?
     var apiEndPoint: String?
-    var requestParams = [String: AnyObject]()
+    var requestParams : String?
     var isVisible: Bool?
     var url: String?
 }

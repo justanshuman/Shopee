@@ -60,7 +60,17 @@ class MainSection {
                 if let apiEndPoint = categoryObj["ApiEndPoint"] as? String {
                     category.apiEndPoint = apiEndPoint
                 }
-                if let requestParams = categoryObj["RequestParams"] as? [String: AnyObject] {
+                if let requestParams = categoryObj["RequestParams"] as? String{
+//                    do {
+//                        //let data = NSData(requestParams)
+//                        let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(requestParams as! NSData, options: .MutableContainers)
+//                        if let j = jsonObject as? [String: AnyObject] {
+//                            print("yeah")
+//                        }
+//                    }
+//                    catch{
+//                        
+//                    }
                     category.requestParams = requestParams
                 }
                 if let isVisible = categoryObj["is_visible"] as? String {

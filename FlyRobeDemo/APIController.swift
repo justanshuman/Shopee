@@ -67,6 +67,7 @@ class APIController: NSObject {
         
     }
     
+    
     static func getImageDataFromUrl(url: NSURL, success: ((imageData: NSData) -> Void)?, failure: (() -> Void)? = nil) -> NSURLSessionDataTask? {
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
@@ -79,6 +80,7 @@ class APIController: NSObject {
         task.resume()
         return task
     }
+   
 }
 
 extension Array {
@@ -87,4 +89,41 @@ extension Array {
         return indices ~= index ? self[index] : nil
     }
     
+}
+
+extension String
+{
+    var parseJSONString: AnyObject?
+    {
+        let data = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        
+        if let jsonData = data
+        {
+            // Will return an object or nil if JSON decoding fails
+            do
+            {
+                let message = try NSJSONSerialization.JSONObjectWithData(jsonData, options:.MutableContainers)
+                if let jsonResult = message as? NSMutableArray
+                {
+                    print(jsonResult)
+                    
+                    return jsonResult //Will return the json array output
+                }
+                else
+                {
+                    return nil
+                }
+            }
+            catch let error as NSError
+            {
+                print("An error occurred: \(error)")
+                return nil
+            }
+        }
+        else
+        {
+            // Lossless conversion of the string was not possible
+            return nil
+        }
+    }
 }

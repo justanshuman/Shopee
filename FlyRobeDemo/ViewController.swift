@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol ColloectionViewSelected: NSObjectProtocol {
+    func collectionViewCellSelectedatWithEndPoint(category: Category)
+}
 class ViewController: UIViewController {
     @IBOutlet weak var citySelectorStarterView: UIView!
     @IBOutlet weak var selectedCityNameLabel: UILabel!
@@ -34,6 +37,7 @@ class ViewController: UIViewController {
         progressView.showProgressView()
         dropDownView.citySelectedDelegate = self
         hideCitySelectionView()
+        
     }
     
     func setTapGestureRecognizers() {
@@ -43,6 +47,7 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
         setUpScreen()
     }
     
@@ -55,6 +60,13 @@ class ViewController: UIViewController {
             bar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
             bar.shadowImage = UIImage()
             bar.userInteractionEnabled = false
+        }
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let bar =  self.navigationController?.navigationBar {
+            bar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+            bar.shadowImage = nil
         }
     }
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -84,10 +96,6 @@ class ViewController: UIViewController {
                 })
         })
     }
-    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-       // Constants.refresh()
-        //tableView.reloadData()
-    }
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         Constants.refresh()
         tableView.reloadData()
@@ -111,6 +119,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.categoryList = t
         }
         cell.collectionView.reloadData()
+        cell.colloectionViewSelectedDelegate = self
         return cell
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -177,5 +186,14 @@ extension ViewController: CitySelected {
             }
         }
         hideCitySelectionView()
+    }
+}
+
+extension ViewController: ColloectionViewSelected{
+    func collectionViewCellSelectedatWithEndPoint(category: Category) {
+        if let productsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("productsGridViewController") as? ProductsGridViewController {
+            productsViewController.category = category
+            self.navigationController?.pushViewController(productsViewController, animated: true)
+        }
     }
 }

@@ -25,6 +25,7 @@
 		6E5C30BD1D1BDEAD0060800B /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30BC1D1BDEAD0060800B /* ProgressView.xib */; };
 		6E5C30BF1D1BEAB10060800B /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5C30BE1D1BEAB10060800B /* DropDownView.xib */; };
 		6E5C30C11D1BEABE0060800B /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30C01D1BEABE0060800B /* DropDownView.swift */; };
+		6E5C30C71D1C5E410060800B /* ProductsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C30C61D1C5E410060800B /* ProductsGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		6E5C30BC1D1BDEAD0060800B /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		6E5C30BE1D1BEAB10060800B /* DropDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
 		6E5C30C01D1BEABE0060800B /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		6E5C30C61D1C5E410060800B /* ProductsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsGridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +121,12 @@
 		6E5C30391D1AE0180060800B /* FlyRobeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6E5C30C51D1C5E1D0060800B /* ViewControllers */,
 				6E5C30B51D1B1B3C0060800B /* Model */,
 				6E5C30B21D1B1AAD0060800B /* Util */,
 				6E5C30AD1D1B072F0060800B /* View */,
 				6E5C30A41D1AEEEA0060800B /* TableViewCell */,
 				6E5C303A1D1AE0180060800B /* AppDelegate.swift */,
-				6E5C303C1D1AE0180060800B /* ViewController.swift */,
 				6E5C303E1D1AE0180060800B /* Main.storyboard */,
 				6E5C30411D1AE0180060800B /* Assets.xcassets */,
 				6E5C30431D1AE0180060800B /* LaunchScreen.storyboard */,
@@ -188,6 +190,15 @@
 				6E5C30B81D1B1C840060800B /* Category.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		6E5C30C51D1C5E1D0060800B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C303C1D1AE0180060800B /* ViewController.swift */,
+				6E5C30C61D1C5E410060800B /* ProductsGridViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5C30C71D1C5E410060800B /* ProductsGridViewController.swift in Sources */,
 				6E5C30AC1D1AF2840060800B /* Constants.swift in Sources */,
 				6E5C30C11D1BEABE0060800B /* DropDownView.swift in Sources */,
 				6E5C30A81D1AEF520060800B /* HomeTableViewHeaderViewCell.swift in Sources */,

@@ -230,6 +230,7 @@ Own Everything</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="H7u-O7-97j"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="citySelectorStarterView" destination="Nhs-bF-Bvx" id="xEX-yw-NwH"/>
                         <outlet property="dropDownView" destination="b0S-7e-xBQ" id="gNC-vz-NgR"/>
@@ -238,16 +239,17 @@ Own Everything</string>
                         <outlet property="tableView" destination="H5o-7l-Wof" id="AyW-Ir-DYu"/>
                         <outlet property="tableViewHeaderImageView" destination="imp-LQ-ILP" id="9P0-xp-GKy"/>
                         <outlet property="waysToRentButton" destination="jTc-ir-PDW" id="3CC-67-TIr"/>
+                        <segue destination="zJj-cJ-ABe" kind="show" id="E2e-rI-56a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1944" y="388"/>
         </scene>
-        <!--View Controller-->
+        <!--Products Grid View Controller-->
         <scene sceneID="lgj-6Q-6jX">
             <objects>
-                <viewController id="zJj-cJ-ABe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productsGridViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zJj-cJ-ABe" customClass="ProductsGridViewController" customModule="FlyRobeDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FEF-Gi-I6b"/>
                         <viewControllerLayoutGuide type="bottom" id="uGl-cu-yOo"/>
@@ -256,35 +258,22 @@ Own Everything</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uvn-rY-Vlq">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6QX-lG-PBO">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3mR-3K-Ar0">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-YQ-6f0">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uvn-rY-Vlq" firstAttribute="top" secondItem="FEF-Gi-I6b" secondAttribute="bottom" id="8oT-x9-LcV"/>
-                            <constraint firstItem="uvn-rY-Vlq" firstAttribute="leading" secondItem="ztA-bd-szn" secondAttribute="leading" id="FPa-Lh-Irx"/>
-                            <constraint firstItem="uGl-cu-yOo" firstAttribute="top" secondItem="uvn-rY-Vlq" secondAttribute="bottom" id="GL5-Uo-DOl"/>
-                            <constraint firstAttribute="trailing" secondItem="uvn-rY-Vlq" secondAttribute="trailing" id="YW0-N0-00r"/>
+                            <constraint firstItem="JrV-YQ-6f0" firstAttribute="centerY" secondItem="ztA-bd-szn" secondAttribute="centerY" id="ZE9-gR-H9i"/>
+                            <constraint firstItem="JrV-YQ-6f0" firstAttribute="centerX" secondItem="ztA-bd-szn" secondAttribute="centerX" id="edJ-J5-N5J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="JrV-YQ-6f0" id="vZG-KU-b4Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZr-DB-hfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,10 +282,10 @@ Own Everything</string>
         <!--Navigation Controller-->
         <scene sceneID="N22-ok-y4s">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DXZ-AJ-KvZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DXZ-AJ-KvZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="5Nb-R6-q4G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -21,6 +21,7 @@ class HomeScreenCollectionViewCell: UICollectionViewCell {
 class HomeScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     var categoryList = [Category]()
+    weak var colloectionViewSelectedDelegate: ColloectionViewSelected?
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
@@ -63,6 +64,8 @@ extension HomeScreenTableViewCell: UICollectionViewDataSource {
 extension HomeScreenTableViewCell: UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
+        colloectionViewSelectedDelegate?.collectionViewCellSelectedatWithEndPoint(categoryList[indexPath.row])
         
     }
     
