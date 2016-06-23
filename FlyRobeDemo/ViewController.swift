@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         if let bar =  self.navigationController?.navigationBar {
             bar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
             bar.shadowImage = UIImage()
+            bar.userInteractionEnabled = false
         }
     }
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -82,6 +83,10 @@ class ViewController: UIViewController {
                     self?.progressView.hideProgressView()
                 })
         })
+    }
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+       // Constants.refresh()
+        //tableView.reloadData()
     }
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         Constants.refresh()

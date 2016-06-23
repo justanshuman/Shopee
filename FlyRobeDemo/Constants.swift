@@ -23,7 +23,7 @@ class Constants: NSObject{
     }
     static func refresh(){
         screenSize = UIScreen.mainScreen().bounds.size
-        cellSize = screenSize.width / 2 + 50
+        //cellSize = screenSize.width / 2 + 50
     }
 }
 

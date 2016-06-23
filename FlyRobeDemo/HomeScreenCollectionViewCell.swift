@@ -12,6 +12,7 @@ class HomeScreenCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var progreeView: ProgressView!
     var url: String?
+    var imageData: NSData?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -40,14 +41,19 @@ extension HomeScreenTableViewCell: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("HomeScreenCollectionViewCell", forIndexPath: indexPath) as! HomeScreenCollectionViewCell
         cell.progreeView.showProgressView()
-        if let u = categoryList[indexPath.row].url , imageUrl = NSURL(string: u) {
-            APIController.getImageDataFromUrl(imageUrl, success: { (imageData) in
-                dispatch_async(dispatch_get_main_queue(), {
-                    () -> Void in
-                    cell.imageView.image = UIImage(data: imageData)
-                    cell.progreeView.hideProgressView()
+        if let i = cell.imageData {
+            cell.imageView.image = UIImage(data: i)
+        }
+        else {
+            if let u = categoryList[indexPath.row].url , imageUrl = NSURL(string: u) {
+                APIController.getImageDataFromUrl(imageUrl, success: { (imageData) in
+                    dispatch_async(dispatch_get_main_queue(), {
+                        () -> Void in
+                        cell.imageView.image = UIImage(data: imageData)
+                        cell.progreeView.hideProgressView()
+                    })
                 })
-                })
+        }
         }
         return cell
     }
