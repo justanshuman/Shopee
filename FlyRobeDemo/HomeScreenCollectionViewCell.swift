@@ -2,7 +2,7 @@
 //  HomeScreenCollectionViewCell.swift
 //  FlyRobeDemo
 //
-//  Created by Anshuman Srivastava on 22/06/16.
+//  Created by Anshuman Srivastava on 23/06/16.
 //  Copyright © 2016 Anshuman Srivastava. All rights reserved.
 //
 
@@ -42,19 +42,15 @@ extension HomeScreenTableViewCell: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("HomeScreenCollectionViewCell", forIndexPath: indexPath) as! HomeScreenCollectionViewCell
         cell.progreeView.showProgressView()
-        if let i = cell.imageData {
-            cell.imageView.image = UIImage(data: i)
-        }
-        else {
-            if let u = categoryList[indexPath.row].url , imageUrl = NSURL(string: u) {
-                APIController.getImageDataFromUrl(imageUrl, success: { (imageData) in
-                    dispatch_async(dispatch_get_main_queue(), {
-                        () -> Void in
-                        cell.imageView.image = UIImage(data: imageData)
-                        cell.progreeView.hideProgressView()
-                    })
+        if let u = categoryList[indexPath.row].url , imageUrl = NSURL(string: u) {
+            APIController.getImageDataFromUrl(imageUrl, success: { (imageData) in
+                dispatch_async(dispatch_get_main_queue(), {
+                    () -> Void in
+                    cell.imageView.image = UIImage(data: imageData)
+                    cell.imageData = imageData
+                    cell.progreeView.hideProgressView()
                 })
-        }
+            })
         }
         return cell
     }

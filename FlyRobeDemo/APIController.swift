@@ -1,8 +1,8 @@
 //
 //  APIController.swift
-//  NiceYouTube
+//  FlyRobeDemo
 //
-//  Created by Anshuman Srivastava on 08/06/16.
+//  Created by Anshuman Srivastava on 23/06/16.
 //  Copyright © 2016 Anshuman Srivastava. All rights reserved.
 //
 
@@ -36,7 +36,7 @@ class APIController: NSObject {
                 if r.statusCode == 200 {
                     if let d = data {
                         do {
-                         let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(d, options: .MutableContainers)
+                            let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(d, options: .MutableContainers)
                             if let jsonArray = jsonObject as? Array<AnyObject> {
                                 let dictionary = ["JSON": jsonArray]
                                 success?(response: dictionary)
@@ -44,10 +44,10 @@ class APIController: NSObject {
                                 success?(response: jsonDictionary)
                             }
                         }
-                       
-
+                            
+                            
                         catch let e as NSError{
-                             print(String(data: d, encoding: NSUTF8StringEncoding))
+                            print(String(data: d, encoding: NSUTF8StringEncoding))
                             failure?(response: ["error": "error"])
                         }
                         catch {
@@ -68,6 +68,73 @@ class APIController: NSObject {
     }
     
     
+    static func post(path: String, queryParameters: Dictionary<String, String>?, body: AnyObject?, success: CompletionBlock?, failure: CompletionBlock?) {
+        var queryString = "?"
+        if let params = queryParameters {
+            queryString += "&"
+            for (key, value) in params {
+                queryString += key + "=" + value + "&"
+            }
+        }
+        
+        if let encodedString = queryString.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()) {
+            queryString = encodedString
+        }
+        
+        let url = NSURL(string: path.stringByAppendingString(queryString))
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        if request.valueForHTTPHeaderField("Content-Type") == nil {
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
+        if let b = body {
+            request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(b, options: [])
+        }
+        
+        request.timeoutInterval = 60
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            })
+            if let r = response as? NSHTTPURLResponse{
+                if r.statusCode == 200 {
+                    if let d = data {
+                        do {
+                            let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(d, options: .MutableContainers)
+                            if let jsonArray = jsonObject as? Array<AnyObject> {
+                                let dictionary = ["JSON": jsonArray]
+                                success?(response: dictionary)
+                            } else if let jsonDictionary = jsonObject as? Dictionary<String, AnyObject> {
+                                success?(response: jsonDictionary)
+                            }
+                        }
+                            
+                            
+                        catch let e as NSError{
+                            print(String(data: d, encoding: NSUTF8StringEncoding))
+                            failure?(response: ["error": "error"])
+                        }
+                        catch {
+                            failure?(response: nil)
+                        }
+                    }
+                }
+                else {
+                    failure?(response: nil)
+                }
+            }
+        })
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        })
+        task.resume()
+        
+    }
+    
+    
+    
     static func getImageDataFromUrl(url: NSURL, success: ((imageData: NSData) -> Void)?, failure: (() -> Void)? = nil) -> NSURLSessionDataTask? {
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
@@ -80,7 +147,7 @@ class APIController: NSObject {
         task.resume()
         return task
     }
-   
+    
 }
 
 extension Array {

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FlyRobeDemo
 //
-//  Created by Anshuman Srivastava on 22/06/16.
+//  Created by Anshuman Srivastava on 23/06/16.
 //  Copyright © 2016 Anshuman Srivastava. All rights reserved.
 //
 
@@ -47,10 +47,10 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         setNeedsStatusBarAppearanceUpdate()
         setUpScreen()
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -64,9 +64,11 @@ class ViewController: UIViewController {
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         if let bar =  self.navigationController?.navigationBar {
             bar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
             bar.shadowImage = nil
+            bar.userInteractionEnabled = true
         }
     }
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

@@ -61,17 +61,16 @@ class MainSection {
                     category.apiEndPoint = apiEndPoint
                 }
                 if let requestParams = categoryObj["RequestParams"] as? String{
-//                    do {
-//                        //let data = NSData(requestParams)
-//                        let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(requestParams as! NSData, options: .MutableContainers)
-//                        if let j = jsonObject as? [String: AnyObject] {
-//                            print("yeah")
-//                        }
-//                    }
-//                    catch{
-//                        
-//                    }
-                    category.requestParams = requestParams
+                    do {
+                        if let data = requestParams.dataUsingEncoding(NSUTF8StringEncoding) {
+                            if let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String: AnyObject] {
+                                print("yeah: \(jsonObject)")
+                                category.requestParams = jsonObject
+                            }
+                        }
+                    } catch{
+                        
+                    }
                 }
                 if let isVisible = categoryObj["is_visible"] as? String {
                     if isVisible.caseInsensitiveCompare("False") == .OrderedSame {
