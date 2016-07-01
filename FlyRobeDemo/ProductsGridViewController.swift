@@ -126,20 +126,22 @@ extension ProductsGridViewController: UICollectionViewDataSource {
 extension ProductsGridViewController: UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if let cell = collectionView.cellForItemAtIndexPath(indexPath) as? CategoryCollectionViewCell{
-            var popUpView = UIImageView()
+        if let cell = collectionView.cellForItemAtIndexPath(indexPath) as? CategoryCollectionViewCell, imageData = cell.imageData {
+            let popUpView = UIImageView()
             let newFrame = cell.imageView.convertRect(self.view.bounds, toView: nil)
-            popUpView.image = UIImage(data: cell.imageData!)
+            popUpView.image = UIImage(data: imageData)
+            popUpView.backgroundColor = UIColor.clearColor()
             popUpView.contentMode = .ScaleAspectFit
             let frame = CGRect(x: newFrame.origin.x ,y: newFrame.origin.y, width: cell.imageView.frame.size.width, height: cell.imageView.frame.size.height)
-            popUpView.frame = CGRectMake(frame.minX, frame.minY, frame.width, frame.height)
+            popUpView.frame = frame
             self.view.addSubview(popUpView)
-            
+            cell.imageView.hidden = true
             UIView.animateWithDuration(0.5, animations: {
                 popUpView.frame = CGRectMake(50 ,84, UIScreen.mainScreen().bounds.size.width - 100, 300)
                 }, completion: { (complete) in
                     popUpView.removeFromSuperview()
-                    self.showPDPVC(self.productsArray[safe: indexPath.row]!, imageData: cell.imageData!, frame: frame)
+                    cell.imageView.hidden = false
+                    self.showPDPVC(self.productsArray[indexPath.row], imageData: imageData, frame: frame)
             })
         }
     }
